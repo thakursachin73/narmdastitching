@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>navBar</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <nav>
+      <ul class="sidebar">
+        <li onclick="closeSidebar()">
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
+        </li>
+        <li><a href="Home#">Home</a></li>
+        <li><a href="Blog#">Blog</a></li>
+        <li><a href="ContactUs#">Contact</a></li>
+        <li><a href="About Us#">About Us</a></li>
+        <li><a href="Feedback#">Feedback</a></li>
+        <li><a href="#"></a></li>
+      </ul>
+      <ul>
+        <li class="hideOnMobile">
+          <a id="active" href="Home#">Home</a>
+          <span id="sp1" class="bottom"></span>
+        </li>
+        <li class="hideOnMobile">
+          <a href="Blog#">Blog</a>
+          <span id="sp2" class="bottom"></span>
+        </li>
+        <li class="hideOnMobile">
+          <a href="ContactUs#">Contact</a>
+          <span id="sp3" class="bottom"></span>
+        </li>
+        <li class="hideOnMobile">
+          <a href="About Us#">About Us</a>
+          <span id="sp4" class="bottom"></span>
+        </li>
+        <li class="hideOnMobile">
+          <a href="Feedback#">Feedback</a>
+          <span id="sp5" class="bottom"></span>
+        </li>
+        <li class="menuButton" onclick = showSidebar()>
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 -960 960 960"
+              width="24"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <script>
+      function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+      }
+      function closeSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+      }
+    </script>
+  </body>
+</html>
